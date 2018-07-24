@@ -1,0 +1,15 @@
+using UnityEngine;
+
+[System.Serializable]
+public class [COLLECTION_NAME] : CollectionElement
+{
+    public int level;
+    public int health;
+    public int mana;
+}
+
+[CreateAssetMenu(fileName = "[COLLECTION_NAME]sCollection", menuName = "Collections/[COLLECTION_NAME]s")]
+public class [COLLECTION_NAME]sCollection : Collection <[COLLECTION_NAME]> {}
+
+[System.Serializable]
+public class [COLLECTION_NAME]Reference : CollectionReference <[COLLECTION_NAME]sCollection, [COLLECTION_NAME]> {}
