@@ -1,23 +1,27 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Do.Collections;
 
 public class CollectionDrawer : MonoBehaviour
 {
-    [SerializeField] WeaponsCollection collection;
-    [SerializeField] GameObject listElementPrefab;
+    [SerializeField] WeaponsCollection collection = null;
+    [SerializeField] GameObject listElementPrefab = null;
     List<ElementBloc> elements = new List<ElementBloc>();
 
     void Start()
     {
         ClearElements();
-        foreach (CollectionElement collectionElement in collection)
+        foreach (Document collectionElement in collection)
         {
+            if (collectionElement == null)
+                continue;
+
             GameObject elementObject = GameObject.Instantiate(listElementPrefab);
             elementObject.transform.SetParent(gameObject.transform);
 
             ElementBloc elementBloc = elementObject.GetComponent<ElementBloc>();
-            elementBloc.SetText(collectionElement.name);
+            elementBloc.SetText(collectionElement.Identifier);
             elements.Add(elementBloc);
         }
     }

@@ -1,28 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using System.IO;
+﻿using UnityEngine;
+using Do.Collections;
 
 public class Player : MonoBehaviour
 {
     public new string name = "Player";
-    [SerializeField] WeaponReference weapon;
+    [SerializeField] WeaponDocument weapon = null;
 
-    public void Load()
-    {
-        DataLoader.LoadFromJSON(Path.Combine(Application.dataPath, "Data/Player.json"), this);
-    }
-
-    public void Save()
-    {
-        DataLoader.SaveToJSON(Path.Combine(Application.dataPath, "Data/Player.json"), this);
-
-#if UNITY_EDITOR
-        UnityEditor.AssetDatabase.Refresh();
-#endif
-    }
-
-    public WeaponReference Weapon
+    public WeaponDocument Weapon
     {
         get { return weapon; }
         set { weapon = value; }

@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class ElementBloc : MonoBehaviour
 {
-    [SerializeField] Text textComponent;
+    [SerializeField] Text textComponent = null;
 
     public void SetText(string text)
     {

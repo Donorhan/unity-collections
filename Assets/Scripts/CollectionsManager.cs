@@ -1,9 +1,10 @@
 ﻿using UnityEngine;
 using System.IO;
+using Do.Collections;
 
 public class CollectionsManager : MonoBehaviour
 {
-    [SerializeField] WeaponsCollection weaponsCollection;
+    [SerializeField] WeaponsCollection weaponsCollection = null;
     [SerializeField] string collectionsFolder = "Data";
 
     public void Load()

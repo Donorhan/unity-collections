@@ -3,11 +3,12 @@ using UnityEngine.UI;
 
 public class PlayerIndicator : MonoBehaviour
 {
-    [SerializeField] Player player;
-    [SerializeField] Text textComponent;
+    [SerializeField] Player player = null;
+    [SerializeField] Text textComponent = null;
 
     void Update()
     {
-        textComponent.text = player.name + " - " + player.Weapon.Identifier;
+        string weaponName = player.Weapon ? player.Weapon.Identifier : "Unknown";
+        textComponent.text = player.name + " - " + weaponName;
     }
 }
