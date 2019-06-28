@@ -1,0 +1,10 @@
+using UnityEngine;
+
+namespace Do.Collections
+{
+    [CreateAssetMenu(fileName = "[COLLECTION_NAME]sCollection", menuName = "Collections/[COLLECTION_NAME]sCollection")]
+    public class [COLLECTION_NAME]sCollection : Collection <[COLLECTION_NAME]Document>
+    {
+
+    }
+}

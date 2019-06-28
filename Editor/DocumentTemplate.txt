@@ -1,0 +1,11 @@
+using UnityEngine;
+
+namespace Do.Collections
+{
+    [CreateAssetMenu(fileName = "[COLLECTION_NAME]", menuName = "Collections/[COLLECTION_NAME]Document")]
+    [System.Serializable]
+    public class [COLLECTION_NAME]Document : Document
+    {
+
+    }
+}
