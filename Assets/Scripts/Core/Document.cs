@@ -6,10 +6,6 @@ namespace Do.Collections
     public abstract class Document : ScriptableObject
     {
         [SerializeField] string identifier = "";
-
-        public string Identifier
-        {
-            get { return identifier; }
-        }
+        public string Identifier => identifier;
     }
 }

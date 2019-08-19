@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
 
     public WeaponDocument Weapon
     {
-        get { return weapon; }
+        get => weapon;
         set { weapon = value; }
     }
 }
